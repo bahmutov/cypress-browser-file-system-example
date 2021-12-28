@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "serve -p 4200 public"
+    "start": "serve -p 4200 public",
+    "dev": "start-test 4200 cy:open",
+    "cy:open": "cypress open"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
   "devDependencies": {
     "cypress": "^9.2.0",
     "prettier": "^2.5.1",
-    "serve": "^13.0.2"
+    "serve": "^13.0.2",
+    "start-server-and-test": "^1.14.0"
   }
 }
