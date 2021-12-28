@@ -1,0 +1,18 @@
+{
+  "name": "cypress-browser-file-system-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve -p 4200 public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.2.0",
+    "prettier": "^2.5.1",
+    "serve": "^13.0.2"
+  }
+}
