@@ -18,3 +18,15 @@ it('shows file contents', () => {
   cy.get('#output').should('have.text', 'Hello, world!')
   cy.get('@text').should('be.called')
 })
+
+it('shows alert when the user cancels', () => {
+  cy.visit('/', {
+    onBeforeLoad(win) {
+      cy.stub(win, 'alert').as('alert')
+
+      cy.stub(win, 'showOpenFilePicker').rejects(new Error('User cancelled'))
+    },
+  })
+  cy.get('button').click()
+  cy.get('@alert').should('be.calledWith', 'Error: User cancelled')
+})
